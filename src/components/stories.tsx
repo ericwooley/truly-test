@@ -18,3 +18,5 @@ addDecorator(StoreDecorator);
 require("./appBar/appBar.story");
 require("./contactList/contactList.story");
 require("./contactListRow/contactListRow.story");
+require("./addContactButton/addContactButton.story");
+require("./contactForm/contactForm.story");

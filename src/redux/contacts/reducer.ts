@@ -5,9 +5,15 @@ import { handleActions,
 import { actions } from "./actions";
 import { IContact } from "../../interfaces/contacts";
 const initialContacts: IContact[] = [];
+const newContact: IContact = {
+  name: "",
+  context: "",
+  number: ""
+};
 const initialState = {
   searchValue: "",
-  contacts: initialContacts
+  contacts: initialContacts,
+  newContact
 };
 export type ContactState = typeof initialState;
 const reducer = handleActions(

@@ -1,0 +1,23 @@
+import * as React from "react";
+import { storiesOf } from "@storybook/react";
+import ContactForm from "./contactForm";
+// import { action } from "@storybook/addon-actions";
+storiesOf("components/Contact Form", module)
+  .add("with values and errors", () => (
+    <ContactForm 
+      contact={{name: "steve", number: "01234", context: "work"}}
+      contactErrors={{name: "steve is not cool", number: "whats with that phone number", context: "really? work?"}}
+    />
+  ))
+  .add("with no values and no errors", () => (
+    <ContactForm 
+      contact={{name: "", number: "", context: ""}}
+      contactErrors={{name: "", number: "", context: ""}}
+    />
+  ))
+  .add("with values and no errors", () => (
+    <ContactForm 
+      contact={{name: "steve", number: "01234", context: "work"}}
+      contactErrors={{name: "", number: "", context: ""}}
+    />
+  ));

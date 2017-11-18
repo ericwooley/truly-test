@@ -2,9 +2,10 @@ import { createSelector } from "reselect";
 
 import { IContact } from "../../interfaces/contacts";
 import { ContactState } from "./reducer";
-interface IStateSubset { contacts: ContactState; }
-const searchValue = (state: IStateSubset) => state.contacts.searchValue;
-const contacts = (state: IStateSubset) => state.contacts.contacts;
+export interface IContactSubState { contacts: ContactState; }
+const searchValue = (state: IContactSubState) => state.contacts.searchValue;
+const contacts = (state: IContactSubState) => state.contacts.contacts;
+const userEnteredContact = (state: IContactSubState) => state.contacts.newContact;
 const filteredContacts = createSelector(
   searchValue, 
   contacts, 
@@ -21,7 +22,16 @@ const filteredContacts = createSelector(
     }); 
   }
 );
+
+const userContact = (state: IContactSubState) => state.contacts.newContact;
+const userContactErrors = createSelector(userContact, (contact): IContact => ({
+  name: contact.name.length ? "" : "name is required",
+  context: contact.context.length ? "" : "context is required",
+  number:  contact.number.length ? "" : "phone number is required",
+}));
 export default {
+  userContactErrors,
+  userEnteredContact,
   contacts,
   filteredContacts,
   searchValue

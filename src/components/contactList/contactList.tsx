@@ -2,6 +2,7 @@ import * as React from "react";
 import { IContact } from "../../interfaces/contacts";
 import { List } from "material-ui/List";
 import ContactListRow from "../contactListRow/contactListRow";
+
 export default class ContactList extends React.PureComponent<{contacts: IContact[]}> {
   render () {
     return (
