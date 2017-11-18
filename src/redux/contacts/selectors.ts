@@ -4,7 +4,19 @@ import { IContact } from "../../interfaces/contacts";
 import { ContactState } from "./reducer";
 export interface IContactSubState { contacts: ContactState; }
 const searchValue = (state: IContactSubState) => state.contacts.searchValue;
-const contacts = (state: IContactSubState) => state.contacts.contacts;
+const contactsUnsorted = (state: IContactSubState) => state.contacts.contacts;
+const contacts = createSelector(contactsUnsorted, (contactList: IContact[]) => 
+  [...contactList].sort((a, b) => {
+    const aName = a.name.toLowerCase();
+    const bName = b.name.toLowerCase();
+    if (aName < bName) {
+      return -1;
+    }
+    if (aName > bName) {
+      return 1;
+    }
+    return 0;
+  }));
 const userEnteredContact = (state: IContactSubState) => state.contacts.newContact;
 const filteredContacts = createSelector(
   searchValue, 

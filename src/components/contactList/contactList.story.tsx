@@ -4,7 +4,7 @@ import { storiesOf } from "@storybook/react";
 // import { linkTo } from "@storybook/addon-links";
 import ContactList from "./contactList";
 import { IContact } from "../../interfaces/contacts";
-const {contacts}: {contacts: IContact[]} = require("../../../db.json");
+const {contacts}: {contacts: IContact[]} = require("../../../db.testdata.json");
 
 storiesOf("components/ContactList", module)
 .add("full ContactList", () => <ContactList contacts={contacts}/>);

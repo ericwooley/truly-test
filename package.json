@@ -3,10 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/lodash": "^4.14.85",
     "@types/react-redux": "^5.0.13",
     "@types/redux": "^3.6.0",
     "@types/redux-saga": "^0.10.5",
     "@types/reselect": "^2.2.0",
+    "@types/uuid": "^3.4.3",
+    "lodash": "^4.17.4",
     "material-ui": "^0.19.4",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
@@ -16,7 +19,8 @@
     "redux": "^3.7.2",
     "redux-actions": "^2.2.1",
     "redux-saga": "^0.16.0",
-    "reselect": "^3.0.1"
+    "reselect": "^3.0.1",
+    "uuid": "^3.1.0"
   },
   "scripts": {
     "build": "react-scripts-ts build",
@@ -26,7 +30,7 @@
     "start": "react-scripts-ts start",
     "setEnvVars": "",
     "test": "react-scripts-ts test --env=jsdom",
-    "storybook": "open http://localhost:6006; start-storybook -p 6006",
+    "storybook": "(sleep 3 && open http://localhost:6006)| start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "devDependencies": {

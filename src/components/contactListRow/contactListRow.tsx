@@ -24,18 +24,16 @@ export default class ContactListRow extends React.PureComponent<{contact: IConta
       default:
     }
     return (
-      <span>
-        <ListItem
-          primaryText={contact.name}
-          secondaryText={contact.number}
-          rightIcon={icon}
-          leftAvatar={
-            <Avatar
-              src={"http://lorempixel.com/100/100/people/" + encodeURIComponent(contact.name).replace(".", "")} 
-            />
-            }
-        />
-      </span>
+      <ListItem
+        primaryText={contact.name}
+        secondaryText={contact.number}
+        rightIcon={icon}
+        leftAvatar={
+          <Avatar
+            src={"http://lorempixel.com/100/100/people/" + encodeURIComponent(contact.name).replace(".", "")} 
+          />
+          }
+      />
     ); 
   }
 }

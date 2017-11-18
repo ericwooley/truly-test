@@ -6,10 +6,10 @@ const sueSauceContact = {"name": "Sue S. Sauce", "number": "+16465558080", "cont
 const mcdanielsMauroContact = {"number": "+17316441809", "context": "salesforce", "name": "Mcdaniels Mauro"};
 const backusFerniehirstContact = {"number": "+13175564791", "context": "enemies", "name": "Backus Ferniehirst"};
 const testData = [
+  backusFerniehirstContact,
   bobBarkerContact,
-  sueSauceContact,
   mcdanielsMauroContact,
-  backusFerniehirstContact
+  sueSauceContact
 ];
 const defaultContactState: ContactState = {
   contacts: [],

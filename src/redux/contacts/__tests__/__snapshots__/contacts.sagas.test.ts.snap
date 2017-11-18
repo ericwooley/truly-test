@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`create-contact-close-form 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "PUT": Object {
+    "action": Object {
+      "payload": false,
+      "type": "DISPLAY_ADD_CONTACT_FORM",
+    },
+    "channel": null,
+  },
+}
+`;
+
+exports[`create-contact-error-reset-list 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "PUT": Object {
+    "action": Object {
+      "payload": Array [],
+      "type": "SET_CONTACTS",
+    },
+    "channel": null,
+  },
+}
+`;
+
+exports[`create-contact-optimistic-update 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "PUT": Object {
+    "action": Object {
+      "payload": Array [
+        Object {
+          "context": "work",
+          "name": "steve",
+          "number": "1234567890",
+        },
+      ],
+      "type": "SET_CONTACTS",
+    },
+    "channel": null,
+  },
+}
+`;
+
+exports[`create-contact-reset-after 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "PUT": Object {
+    "action": Object {
+      "type": "RESET_NEW_CONTACT",
+    },
+    "channel": null,
+  },
+}
+`;
+
+exports[`remove-old-snapshot 1`] = `
+Object {
+  "@@redux-saga/IO": true,
+  "PUT": Object {
+    "action": Object {
+      "payload": Array [
+        Object {
+          "context": "work",
+          "id": "e02604b6-5e1d-402b-ae36-a966899fdcd9",
+          "name": "steve",
+          "number": "1234567890",
+        },
+      ],
+      "type": "SET_CONTACTS",
+    },
+    "channel": null,
+  },
+}
+`;
